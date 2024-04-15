@@ -1,0 +1,70 @@
+.objeto{
+    padding-top: 3rem;
+    padding-left: 19rem;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.botonrojo{
+    background-color: red;
+    color: white;
+
+}
+.img234{
+    max-width: 100%;
+    padding: 30px;
+}
+.xd{
+    overflow-x: scroll;
+}
+.height34{
+    height: 100vh;
+}
+.carrito1{
+    display: flex;
+    flex-direction: column;
+}
+.espacio{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20rem;
+}
+.top23{
+    margin-bottom: 19px;
+}
+
+.padding09{
+    margin: 15px;
+}
+
+.azul1{
+    background-color: #0b67d7;
+}
+
+.textalign89{
+    text-align: center;
+}
+.elementopadding{
+    padding: 10px;
+}
+
+.botonpadding{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fontzise{
+    font-size: 30px;
+}
+.bold90{
+    font-weight: bold;
+    font-size: 25px;
+}
+.bold901{
+    font-weight: bolder;
+    font-size: 25px;
+}
+.vaciar{
+    background-color:#44e118 ;
+}

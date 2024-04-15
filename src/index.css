@@ -1,0 +1,695 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    min-height: 100vh;
+    background: #070f1b;
+    overflow: hidden;
+  }
+
+.inicio{
+  width: 100%;
+  height: auto;
+}  
+
+.bubbles{
+    position: relative;
+    display: flex;
+  }
+  
+.bubbles span{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    margin: 0 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #9a9a9a44,
+    0 0 50px #ffffff,
+    0 0 100px #ffffff;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+  }
+  
+.bubbles span:nth-child(even){
+    background: #0a99b3;
+    box-shadow: 0 0 0 10px #253032,
+    0 0 50px #02d9ff,
+    0 0 100px #02d9ff;
+  }
+  
+@keyframes animate{
+    0%{
+      transform: translateY(100vh) scale(0);
+    }
+    100%{
+      transform: translateY(-10vh) scale(1);
+    }
+  
+  }
+
+.swiper {
+    height: 100vh !important;
+    top: -400px;
+  }
+.mySwiper {
+    width: 100%;
+    left: 5%;
+  }
+  
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+.swiper-button-prev {
+    left: 37.9%; 
+    top: 50%; 
+    transform: translateY(740%); 
+    color: #5a5b60;
+  }
+  
+.swiper-button-next {
+    right: 57%; 
+    top: 50%; 
+    transform: translateY(740%); 
+    color: #5a5b60;
+  }
+  
+  
+/*Este es el brillo de Game-Stack*/
+.gs{
+    text-shadow: 0 0 5px #0ea5e9,
+    0 0 25px #0284c7,
+    0 0 50px #0369a1,
+    0 0 100px #0ea5e9;
+  }
+  
+/* Registrarse efecto broder neon*/
+.registrarse {
+    animation-name: text-shadow;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+  }
+  
+@keyframes text-shadow {
+    0% {
+      text-shadow: 0 0 5px #ff0000, 0 0 25px #ff0000, 0 0 50px #876d6d, 0 0 100px #ff0000;
+    }
+    20% {
+      text-shadow: 0 0 5px #ff0000, 0 0 25px #ff0000, 0 0 50px #ff0000, 0 0 100px #ff0000;
+    }
+    100% {
+      text-shadow: 0 0 5px #ff0000, 0 0 25px #ff0000, 0 0 50px #876d6d, 0 0 100px #ff0000;
+    }
+  }
+  
+.ini{
+    text-shadow: 0 0 5px #00ff66,
+    0 0 25px #26ff00,
+    0 0 50px#699e60,
+    0 0 100px #26ff00;
+  }
+
+  .SnesPad{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 480px;
+    left: 33%;
+  }
+
+/*Aqui empieza el css de la caja de ingreso*/
+.Login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 500px;
+    height: 300px;
+    background: transparent;
+    border: 5px solid #333;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 5vh;
+    left: 80%;
+}
+
+.wrapper:hover{
+    border: 5px solid #0ef;
+    box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+}
+h2{
+    font-size: 2em;
+    text-align: center;
+    color: #ffff;
+    transition: .5s;
+}
+
+.wrapper:hover h2{
+    color: #0ef;
+}
+
+.input-box{
+    position: relative;
+    width: 320px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #333;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #ffff;
+    padding: 0 10px 0 35px;
+}
+
+.wrapper:hover .input-box input{
+    border: 2px solid #0ef;
+    box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+}
+
+.input-box input::placeholder{
+    color: rgba(255, 255, 255, .3);
+}
+
+.input-box .icon{
+    position: absolute;
+    left: 10px;
+    color: #ffff;
+    font-size: 1.2em;
+    line-height: 55px;
+}
+.wrapper:hover .input-box .icon{
+    color: #0ef;
+
+}
+
+.contrasena-olvidada{
+    margin: -15px 0 15px;
+}
+
+.contrasena-olvidada a{
+    color: #ffff;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+.contrasena-olvidada a:hover{
+    text-decoration: underline;
+}
+
+button{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #ffff;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.wrapper:hover button{
+    background: #0ef;
+    color: #000000;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.SinCuenta{
+    font-size: .9em;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.SinCuenta p{
+    color: #ffff;
+}
+
+.SinCuenta p a{
+    color: #333;
+    text-decoration: none;
+}
+
+.wrapper:hover .SinCuenta p a{
+    color: #0ef;
+}
+
+.SinCuenta p a:hover{
+    text-decoration: underline;
+}
+
+/*Aqui empieza el css de la caja de recordar contraseña*/
+
+.Remember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Wrapper2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  width: 500px;
+  height: 300px;
+  background: transparent;
+  border: 5px solid #333;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 5vh;
+  left: 80%;
+}
+
+.Wrapper2:hover {
+  border: 5px solid #0ef;
+  box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+}
+
+.Wrapper2 h2 {
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  transition: .5s;
+}
+
+.Wrapper2:hover h2 {
+  color: #0ef;
+}
+
+.input-box2 {
+  position: relative;
+  width: 320px;
+  margin: 30px 0;
+}
+
+.input-box2 input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #333;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 10px 0 35px;
+}
+
+.Wrapper2:hover .input-box2 input {
+  border: 2px solid #0ef;
+  box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+}
+
+.input-box2 input::placeholder {
+  color: rgba(255, 255, 255, .3);
+}
+
+.input-box2 .icon2 {
+  position: absolute;
+  left: 10px;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 55px;
+}
+
+.Wrapper2:hover .input-box2 .icon2 {
+  color: #0ef;
+}
+
+button {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.Wrapper2:hover button {
+  background: #0ef;
+  color: #000;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.SinCuenta {
+  font-size: .9em;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.SinCuenta p {
+  color: #fff;
+}
+
+.SinCuenta p a {
+  color: #333;
+  text-decoration: none;
+}
+
+.Wrapper2:hover .SinCuenta p a {
+  color: #0ef;
+}
+
+.SinCuenta p a:hover {
+  text-decoration: underline;
+}
+/*Aqui empieza el css de la caja de registro*/
+
+.Registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Wrapper3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  width: 500px;
+  background: transparent;
+  border: 5px solid #333;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 5vh;
+  left: 80%;
+}
+
+.Wrapper3:hover {
+  border: 5px solid #0ef;
+  box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+}
+
+.Wrapper3 h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  transition: .5s;
+}
+
+.Wrapper3:hover h1 {
+  color: #0ef;
+}
+
+.input-box3 {
+  position: relative;
+  width: 320px;
+  margin: 20px 0; 
+}
+
+.input-box3 input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #333;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 10px; 
+}
+
+.Wrapper3:hover .input-box3 input {
+  border: 2px solid #0ef;
+  box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+}
+
+.input-box3 input::placeholder {
+  color: rgba(255, 255, 255, .3);
+}
+
+button {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em; /* Ajuste del tamaño del texto */
+  color: #fff;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.Wrapper3:hover button {
+  background: #0ef;
+  color: #000;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.Concuenta {
+  font-size: .9em;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.Concuenta p {
+  color: #fff;
+}
+
+.Concuenta p a {
+  color: #333;
+  text-decoration: none;
+}
+
+.Wrapper3:hover .Concuenta p a {
+  color: #0ef;
+}
+
+.Concuenta p a:hover {
+  text-decoration: underline;
+}
+
+/* Aqui comienza el css de principal*/
+/* css de sidebarr*/
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #0f213d;
+  color: #fff;
+}
+
+.sidebar-header {
+  padding: 10px;
+  text-align: center;
+  background-color: #19345f;
+  font-size: 25px;
+}
+
+.menu{
+  position: relative;
+  left: 25px;
+  font-size: 25px;
+}
+
+.menu li{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar .menu li:hover {
+  color: #0ef; 
+}
+
+.Categorias{
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  font-size: 25px;
+  background-color: #19345f;
+}
+
+.menu2{
+  position: relative;
+  left: 40px;
+  font-size: 25px;
+}
+
+.menu2 li{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.sidebar .menu2 li:hover {
+  color: rgb(80, 246, 144); 
+}
+
+/*Css de navbarr*/
+
+.navbarr {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  background-color: #19345f;
+  margin-top: 20px;
+  width: 120vh; 
+  height: 65px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 30%;
+  z-index: 1;
+}
+
+.navbarr-placeholder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 700px;
+  background: transparent;
+}
+
+.navbarr:hover .navbarr-placeholder input {
+  border: 2px solid #0ef;
+  box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #333;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 10px; 
+}
+
+.navbarr-placeholder > button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.navbarr-placeholder > button:hover {
+  background: rgb(0, 147, 158);
+  border: 2px solid #0ef;
+  box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+}
+
+/* Aqui empieza el css de Cuenta*/
+
+.Cuenta{
+  background-color: #19345f;
+  text-align: center;
+  width: 150vh;
+  height: 720px;
+  margin-left: 100%;
+  margin-top: 5%;
+  border-radius: 8px;
+}
+
+.CuentaEdit{
+  width: 50%;
+  height: 675px;
+  background-color: #13284b;
+  color: #fff;
+  font-size: 40px;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding-left: 22px;
+  padding-top: 20px;
+}
+
+.CuentaEdit .Nombre{
+  background: #0d1b34;
+  width: 500px;
+  border: transparent;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.CuentaEdit .Avatar{
+  text-align: center;
+  padding-top: 150px;
+}
+
+.CuentaEdit .Cambiar{
+  background: #0d1b34;
+  font-size: 20px;
+  width: 50%;
+  left: 25%;
+}
+
+.CuentaEdit .Cambiar:hover{
+  background-color: #1e3a6c; 
+}
+
+.Guardar{
+  margin-top: 120px;
+  background-color: #0d1b34;
+  font-size: 20px;
+  left: -10px;
+}
+
+.CuentaEdit .Guardar:hover{
+  background-color: #1e3a6c; 
+}
+
+.CuentaViz{
+  width: 80%;
+  height: 500px;
+  background-color: #0d1b34;
+  color: #fff;
+  font-size: 40px;
+  margin-left: 650px;
+  margin-top: -580px;
+  border-radius: 8px;
+  padding-top: 20px;
+}
+
+.CuentaViz h2{
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
